@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width,user-scalable=no">
+		<title>Climate change emissions footprint calculator</title>
+		<meta name="twitter:card" content="summary_large_image">
+	    <meta name="twitter:site" content="@ft">
+	    <meta name="twitter:creator" content="@jburnmurdoch">
+	    <meta name='twitter:url' content="http://ig.ft.com/sites/climate-change-calculator/"/>
+	    <meta name="twitter:title" content="Can you meet the 2&deg;C target?">
+	    <meta name="twitter:description" content="Can you meet the 2&deg;C target? Find out how different countries must act to reduce emissions">
+	    <meta name="twitter:image" content="http://ig.ft.com/sites/climate-change-calculator/tw.png">
+	    <meta name="og:url" content="http://ig.ft.com/sites/climate-change-calculator/"/>
+	    <meta property="og:title" content="Climate change calculator"/>
+	    <meta property="og:description" content="Can you meet the 2&deg;C target? Find out how different countries must act to reduce emissions"/>
+	    <meta property="og:image" content="http://ig.ft.com/sites/climate-change-calculator/fb.png"/>
+	    <script src="d3.v3.min.js"></script>
+	    <script src="flatpack.js"></script>
+	    <!-- script src="touchDetect.js"></script -->
+	    <script src="saveSvgAsPng.js"></script>
+	    <script charset="utf-8" src="queue.js"></script>
+	    <!-- script charset="utf-8" src="jquery-2.1.4.min.js"></script -->
+	    <link rel="stylesheet" href="main.css" />
+	    <link rel="stylesheet" href="origami.css" />
+	    <link rel="stylesheet" href="//build.origami.ft.com/bundles/css?modules=o-fonts@^1.8.2,o-footer@^3.1.4,o-ft-icons@^2.3.7" />
+	    <link rel="stylesheet" href="metric.css" />
+	    <!-- script charset="utf-8" type="text/javascript" stc="http://keith-wood.name/js/jquery.svgdom.js"></script -->
+	    <!-- script src="jquery.mobile-1.4.5.min.js"></script -->
+	    <style media="screen">
+			
+		</style>
+    </head>
+    <body>
+    <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-35229645-1', 'auto');
+		ga('require','displayfeatures');
+		ga('send', 'pageview');
+	</script>
+
+		<div class='header-img'>
+			<h1>What is the world really doing to stop climate change?</h1>
+			<span class="credit">
+				<a href="http://www.gettyimages.co.uk/search/2/image?family=editorial&assettype=image&artist=joe%20raedle&sort=best&excludenudity=true" target="_blank">Joe Raedle</a> / <a href="http://help.ft.com/tools-services/getty/#axzz3k7qxc3vL" target="_blank">Getty Images</a>
+			</span>
+			<a class="overlay-logo" href="http://www.ft.com" target="_blank"><i class="o-ft-icons-icon o-ft-icons-icon--brand-ft-logo-square demo-icon"></i></a>
+		</div>
+        <div id="outer">
+			<div id="interactive"></div>
+			<div id='kic-credits'>
+				 <p>Interactive graphic by <a href="https://twitter.com/jburnmurdoch" target="_blank" title="John Burn-Murdoch &mdash; Twitter profile">John Burn-Murdoch</a> and <a href="http://search.ft.com/search?queryText=pilita+clark" target="_blank" title="All articles by Pilita Clark on FT.com">Pilita Clark</a><br><br>The COP21 Climate Change Calculator was co-created by the Financial Times and <a href='http://www.climate-kic.org/' target='_blank' title='Climate KIC &mdash; external website'><img src='textonlylogo.png'></a>, creators of the <a href='http://tool.globalcalculator.org/' target='_blank' title='The Global Calculator' alt='The Global Calculator &mdash; external website'>Global Calculator</a>. Its methodology was developed with funding from the <a href="https://www.imperial.ac.uk/grantham/" target="_blank" title="Grantham Institute | Climate Change and the Environment &mdash; external wesite">Grantham Institute</a> at Imperial College London and by a team based at Imperial College London and the <a href="http://www.iisc.ernet.in/" target="_blank" title="Indian Institute of Science &mdash; external website">Indian Institute of Science</a> in Bangalore. You can read more about the work behind the tool in <a href="http://blogs.ft.com/ftdata/2015/10/20/how-we-built-the-cop21-climate-change-calculator" target="_blank" title="How we developed the COP21 Climate Change Calculator &mdash; FT.com">a technical note from the scientists who carried out the research</a>.</p>				 
+				<div class='shareDiv interactive'>
+					<h3>Share the calculator:</h3>
+					<ul class='shareList'>
+						<li class='twitter'><a target='_blank' href=''><i></i></a></li>
+						<li class='facebook'><a target='_blank' href=''><i></i></a></li>
+						<li class='linkedin'><a target='_blank' href=''><i></i></a></li>
+						<li class='reddit'><a target='_blank' href=''><i></i></a></li>
+						<li class='pinterest'><a target='_blank' href=''><i></i></a></li>
+						<li class='googleplus'><a target='_blank' href=''><i></i></a></li>
+					</ul>
+				</div>
+			</div>
+	        <div id="story">
+	        	<h2>Businesses face patchwork of rules under Paris climate deal</h2>
+	        	<p class='byline'>October 20, 2015<br><a href="http://search.ft.com/search?queryText=pilita+clark" target="_blank" title="All articles by Pilita Clark on FT.com">Pilita Clark</a>, Environment Correspondent<!-- <span>&bull;</span> --></p>
+	        	<p>Businesses in the US and the EU face much tougher regulations to combat global warming than their rivals in China, Japan and Australia under the UN <a href="http://www.ft.com/ig/sites/2015/paris-climate-timeline/" target="_blank">climate change accord</a> due to be struck in Paris at the end of the year.</p>
+				<p>The offers <a href="http://www4.unfccc.int/submissions/INDC/Published%20Documents/United%20States%20of%20America/1/U.S.%20Cover%20Note%20INDC%20and%20Accompanying%20Information.pdf" target="_blank">Washington</a> and <a href="" target="_blank">Brussels</a> are making to cut greenhouse gas pollution for the agreement amount to nearly four times the effort of <a href="http://www4.unfccc.int/submissions/INDC/Published%20Documents/China/1/China%27s%20INDC%20-%20on%2030%20June%202015.pdf" target="_blank">Beijing</a> and 1.5 times that of <a href="http://www4.unfccc.int/submissions/INDC/Published%20Documents/Japan/1/20150717_Japan%27s%20INDC.pdf" target="_blank">Tokyo</a>, according to research commissioned by the FT.</p>
+				<p>Australia is <a href="http://www4.unfccc.int/submissions/INDC/Published%20Documents/Australia/1/Australias%20Intended%20Nationally%20Determined%20Contribution%20to%20a%20new%20Climate%20Change%20Agreement%20-%20August%202015.pdf" target="_blank">also proposing</a> to do less than either the US or the EU, even though the average amount of carbon dioxide each of its citizens produces is about <a href="http://www.pbl.nl/en/publications/trends-in-global-co2-emissions-2014-report" target="_blank">the same</a> as people in the US and more than double that of those in the EU.</p>
+				<p>And <a href="http://www4.unfccc.int/submissions/indc/Submission%20Pages/submissions.aspx" target="_blank">Russia&rsquo;s plan</a> to reduce its pollution is the most feeble of any from a major economy, according to analysis by Dr Jeremy Woods of Imperial College London and Dr Rajiv K. Chaturvedi of the Indian Institute of Science in Bangalore.</p>
+				<p>Their data, which the FT has used to create a global climate change calculator, shows the combined pledges countries have made so far will bring down greenhouse gases, but not by enough to prevent risky levels of warming in future.</p>
+				<p>The findings underline the difficulties confronting delegates from nearly 200 countries who are due to meet in Paris in December to finalise the first new global climate change agreement in 18 years.</p>
+				<h3>The Paris accord is aiming to break new ground</h3>
+				<p>The accord is supposed to deliver what more than two decades of UN climate talks have failed to achieve: a permanent cut in planet-warming greenhouse gases that mostly come from burning fossil fuels such as coal, oil and gas.</p>
+				<p>Average temperatures have already risen by nearly 1&deg;C since the industrial revolution and the Paris agreement is supposed to make sure warming does not exceed an internationally-agreed limit of 2&deg;C.</p>
+				<p>Beyond that threshold, <a href="http://www.ipcc.ch/pdf/assessment-report/ar5/wg2/ar5_wgII_spm_en.pdf" target="_blank">scientists say</a> severe and irreversible changes in the climate are likely, from searing heatwaves to more fierce storms and flooding.</p>
+				<p>Recognising it is impossible to force countries to cut their emissions, the Paris negotiations have taken a new tack.</p>
+				<p>Throughout 2015, countries have been tabling voluntary plans showing how they propose to cut their pollution from 2020, the year the new agreement is due to start.</p>
+				<p>Some countries are cutting fossil fuel subsidies and ramping up renewable energy generation. Others are putting a price on carbon dioxide emissions, clamping down on coal power station pollution, making buildings more energy efficient or conserving forests.</p>
+				<p>The UN will shortly issue a report on the 146 plans countries published up to October 1. But this report will not assess the adequacy of each pledge, a politically fraught task that would highlight the relative fairness of each nation&rsquo;s commitment.</p>
+				<p>The research by Dr Woods and Dr Chaturvedi tries to fill that gap by calculating the effort each nation is making.</p>
+				<p>To do this, they have assessed the cut in emissions each government&rsquo;s plan is likely to produce and compared it to what would have happened if virtually nothing had been done, and what scientists say is needed from each country&rsquo;s region to meet the 2&deg;C goal.</p>
+				<h3>For some, it&rsquo;s two steps forward, one step back</h3>
+				<p>They conclude that Moscow&rsquo;s plan, for example, is weak because it proposes a cut in Russia&rsquo;s greenhouse gas pollution of up to 30 per cent by 2030, but only from what it was in 1990, shortly before the country&rsquo;s emissions started plunging in the wake of the collapse of the former Soviet Union.</p>
+				<p>That means that by 2030, Russia&rsquo;s emissions are likely to be the same as they were in 2010.</p>
+				<p>However, the latest report from the UN&rsquo;s Intergovernmental Panel on Climate Change suggests countries such as Russia should be cutting their pollution by up to 40 per cent by 2030 from 2010 levels to reach the 2&deg;C target.</p>
+				<p>The researchers caution the widely differing ways in which countries have expressed their pledges makes it hard to interpret their plans precisely, and there are many uncertainties about the exact extent to which emissions will change in the absence of any climate change action.</p>
+				<p>But Dr Chaturvedi said: &ldquo;What is clear from our analysis is no country is doing enough but some countries are doing far less than they are capable of doing.&rdquo;</p>
+				<p>Researchers at other groups monitoring countries&rsquo; pledges, such as Climate Action Tracker, have said that if the commitments made up to October 1 were met, it would lead to warming of <a href="http://climateactiontracker.org/assets/publications/CAT_global_temperature_update_October_2015.pdf" target="_blank">around 2.7&deg;C</a> by 2100, a 0.4&deg;C improvement on what was expected in December last year.</p>
+				<p>Dr Woods and Dr Chaturvedi&rsquo;s findings are slightly more pessimistic because they include a larger range of possible temperature increases, not just those that are more probable.</p>
+				<p>&ldquo;Average global temperatures are still likely to rise by up to 4&deg;C in 2100, compared to 6&deg;C without any action,&rdquo; said Dr Woods. &ldquo;So it is imperative the Paris agreement includes a system requiring countries to drastically ramp up emissions cuts beyond their current promises.&rdquo;</p>
+				<p>The two academics work with <a href="http://www.climate-kic.org/" target="_blank">Climate-KIC</a>, an EU group that last year helped design an <a href="http://tool.globalcalculator.org/globcalc.html?levers=22rfoe2e13be1111c2c2c1n31hfjdcef222hp233f211111fn2211111111/dashboard/en" target="_blank">online calculator</a> for the UK energy department showing how global emissions can be cut.</p>
+				<p>The FT has used their new data to create the COP21 Climate Change Calculator showing how the Paris pledges made so far are likely to affect global temperatures and what more needs to be done to prevent 2&deg;C of warming.</p>
+				<div class='shareDiv story'>
+					<h3>Share this story:</h3>
+					<ul class='shareList'>
+						<li class='twitter'><a target='_blank' href=''><i></i></a></li>
+						<li class='facebook'><a target='_blank' href=''><i></i></a></li>
+						<li class='linkedin'><a target='_blank' href=''><i></i></a></li>
+						<li class='reddit'><a target='_blank' href=''><i></i></a></li>
+						<li class='pinterest'><a target='_blank' href=''><i></i></a></li>
+						<li class='googleplus'><a target='_blank' href=''><i></i></a></li>
+					</ul>
+				</div>
+		    		<a href="#interactive" class="anchorLink">
+			    		<div>
+			    			<div>Use the COP21 Calculator to see how varying levels of emissions cuts by different regions could make or break the quest to lower emissions to a sustainable level, and to create your own scenario based on how you think mitigation efforts will pan out</div>
+			    			<div><i class="o-ft-icons-icon o-ft-icons-icon--arrow-up demo-icon"></i></div>
+		    			</div>
+	    			</a>
+	    			<div class="crunchLink">
+			    		<div>
+			    			<div>Read more from our series on the challenges posed by climate change to business, governments and the world at large</div>
+			    			<div>
+			    				<img src="crunch.png"></img>
+			    			</div>
+		    			</div>
+	    			</div>
+			</div>
+
+
+			<div id='promos'>
+				<div class="o-grid-row">
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<span>Video</span>
+						<a href="http://video.ft.com/4347884229001/Climate-change-a-burning-issue-in-Paris/ft-world" >
+							<p>Climate change &mdash; a burning issue in Paris<p>
+							<img src="vid1.png"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/ed2c2682-763a-11e5-933d-efcdc3c11c89.html" >
+						<p>Companies sign White House pledge on climate change<p>
+						<img src="http://im.ft-static.com/content/images/0517c5aa-9ed2-4127-ab61-20b547a5653e.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/96ec7b9c-7648-11e5-933d-efcdc3c11c89.html" >
+						<p>Scientist attacks UK cuts to renewable energy subsidy<p>
+						<img src="http://im.ft-static.com/content/images/39fe9a75-b253-4cd5-9fd2-62d09e20ac7d.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/e93916b6-70d1-11e5-9b9e-690fdae72044.html" >
+						<p>Germany has to show that its energy is clean<p>
+						<img src="http://im.ft-static.com/content/images/41994206-f11b-45ac-b711-1b312ccf8ec0.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/88c187b4-5619-11e5-a28b-50226830d644.html" >
+						<p>Carbon capture: Miracle machine or white elephant?<p>
+						<img src="http://im.ft-static.com/content/images/6017b823-db89-4476-a8d3-aaa4cf837bed.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/ig/sites/2015/paris-climate-timeline/" >
+						<p>Timeline: Countdown to Paris<p>
+						<img src="http://im.ft-static.com/content/images/0460f79f-4010-44a5-acf4-1b42375bee34.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/828c8f08-c8d7-11e4-bc64-00144feab7de.html" >
+						<p>Q&A: Why static CO2 emissions are important<p>
+						<img src="http://im.ft-static.com/content/images/d859ceb1-d4ac-480a-891d-69b5e2627724.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/fbcaf01a-68f7-11e5-a57f-21b88f7d973f.html" >
+						<p>EU stuck on horns of ‘trilemma’<p>
+						<img src="http://im.ft-static.com/content/images/9a32fbc0-66b6-4524-83ac-9371e857e930.img"></img>
+						</a>
+						</div>
+					</div><div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/b1f3ec6c-65cd-11e5-a28b-50226830d644.html" >
+						<p>China takes a lead on global climate change<p>
+						<img src="http://im.ft-static.com/content/images/f04b4a03-6f8c-4e03-ad15-cdad1ea0845e.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/7e77292e-6ce6-11e5-aca9-d87542bf8673.html" >
+						<p>Oil and gas groups join forces to back cleaner energy<p>
+						<img src="http://im.ft-static.com/content/images/d3d0fa0a-72d1-4e64-a454-88b54db13286.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/d4a9a6d8-656a-11e5-9846-de406ccb37f2.html" >
+						<p>UK pledges &pound;6bn for climate change mitigation<p>
+						<img src="http://im.ft-static.com/content/images/b4a53290-ceaf-43ed-ba19-1e4898fe39f2.img"></img>
+						</a>
+						</div>
+					</div>
+					<div data-o-grid-colspan="12 S6 M4 XL3">
+						<div class="demo-cell">
+						<a href="http://www.ft.com/cms/s/0/4e1c903e-691c-11e5-97d0-1456a776a4f5.html" >
+						<p>India invokes yoga as it bends to call for climate action<p>
+						<img src="http://im.ft-static.com/content/images/2ddce774-0c0b-418a-b9f5-91af7f80f859.img"></img>
+						</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+			<footer class="o-footer o-footer--theme-light" data-o-component="o-footer">
+				<nav class="o-footer__row">
+					<div class="o-footer__col o-footer__col--full-width">
+						<h3 class="o-footer__title">Sections</h3>
+						<ul class="o-footer__row o-footer__section-list">
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com">Home</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/world/uk">UK</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/world">World</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/companies">Companies</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/markets">Markets</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/global-economy">Global Economy</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/lex">Lex</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/comment">Comment</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/management">Management</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/personal-finance">Personal Finance</a></li>
+							<li class="o-footer__link o-footer__section-link o-footer__col"><a href="//www.ft.com/life-arts">Life &amp; Arts</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="o-footer__row o-footer__copyright">
+					<div class="o-footer__col o-footer__col--full-width">
+						<span>&#xA9; THE FINANCIAL TIMES LTD 2015.</span>
+						<span><abbr title="Financial Times">FT</abbr> and &#x2018;Financial Times&#x2019; are trademarks of The Financial Times Ltd.</span>
+					</div>
+				</div>
+			</footer>
+
+
+		</div>
+
+    	<script type="text/javascript">
+    		var containerEl = d3.select('#interactive');
+    		containerEl.call(flatpack);
+		</script>
+    </body>
+</html>
