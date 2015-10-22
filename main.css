@@ -47,8 +47,7 @@ span.boldText{color:#43423e;background-color:#e9decf;padding:2px 8px; border-rad
 
 .credit{position:absolute;right:5px;bottom:5px;line-height:1;color:#dfded8;font-size:9px;}
 .credit a{text-decoration:none;color:#dfded8;cursor:pointer;font-family:Arial,Helvetica,sans-serif;font-size:9px;}
-a.overlay-logo{font-size:3em;color:#fff1e0;opacity:0.7;position:absolute;left:0.25em;/*background-color:black;*/}
-
+a.overlay-logo{font-size:3em;/*color:#fff1e0;*/opacity:0.7;position:absolute;left:0.25em;top:0.25em;/*background-color:black;*/ display:block;width:48px;height:48px;background:url("http://s.ftimg.net/img/ipad_icon.png") left top no-repeat;background-size:cover;text-indent:-999em;}
 #ft-header {height: 50px;background-color: #fff1e0;width: 100%;position: static;top: 0;z-index: 2000;overflow: hidden;text-align:center;border-bottom: 1px solid #cec6b9;box-shadow: 0 2px 2px 0 rgba(0,0,0,.1);}
 #ft-header a{background-color:#fff1e0; cursor:pointer;}
 #ft-header a>img {margin-top: 13px;opacity: .8;transition: opacity .3s;height:20px;}
@@ -358,13 +357,43 @@ p.sliderLabel{
 .shareList{display:inline-block;padding:0;margin:0;list-style-type:none;vertical-align:bottom;}
 #userShare.active{display:inline-block;}
 #sharingMessage{font-size:1em;}
-li{float:left;width:24px;margin: 0 0 0 5px;}
-#userShare i,.shareList i{float:left;border-radius:2px;width:24px;height:24px;text-indent:24px;background-image:url(http://image.webservices.ft.com/v1/images/raw/ftsocial:twitter,ftsocial:facebook,ftsocial:googleplus,ftsocial:linkedin,ftsocial:reddit,ftsocial:link,ftsocial:pinterest?width=24&source=o-share);overflow:hidden;cursor:pointer;}
+/*li{float:left;width:24px;margin: 0 0 0 5px;}*/
+div.shareDiv h3 {
+	vertical-align: center;
+}
+div.shareDiv ul {
+	list-style-type: none;
+	padding:0;
+	margin: 0;
+	display: inline-block;
+	vertical-align: center;
+}
+.o-share__action {
+	display: inline-block;
+	margin: 0 0 0 8px;
+}
+.o-share__action a {
+	display: block;
+	width: 24px;
+	height: 24px;
+	text-indent: -999em;
+	border-radius: 12px;
+}
+.o-share__action--linkedin a, .o-share__action--wechat a, .o-share__action--weibo a {
+  background-image: url('share-icons.png');
+  background-repeat: no-repeat; background-size: cover;}
+.o-share__action--linkedin a{
+  background-position: 0 0; }
+.o-share__action--wechat a{
+  background-position: 0 -28px; }
+.o-share__action--weibo a{
+  background-position: 0 -56px; }
+/*#userShare i,.shareList i{float:left;border-radius:2px;width:24px;height:24px;text-indent:24px;background-image:url(http://image.webservices.ft.com/v1/images/raw/ftsocial:twitter,ftsocial:facebook,ftsocial:googleplus,ftsocial:linkedin,ftsocial:reddit,ftsocial:link,ftsocial:pinterest?width=24&source=o-share);overflow:hidden;cursor:pointer;}
 .facebook i{background-position-y:-24px;}
 .linkedin i{background-position-y:-73px;}
 .googleplus i{background-position-y:-48px;}
 .reddit i{background-position-y:-97px;}
-.pinterest i{background-position-y:-145px;}
+.pinterest i{background-position-y:-145px;}*/
 
 .titleHolder{position:relative;}
 .axisTitle{position:absolute;-webkit-margin-before:0;-webkit-margin-after:0;font-size:0.8em;top:-30px;margin:0;}

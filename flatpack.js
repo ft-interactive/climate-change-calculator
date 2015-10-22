@@ -367,11 +367,11 @@ function flatpack(selection){
 	'stop-opacity':'1'
 	});
 
-    var shareIntents1 = ["https://twitter.com/intent/tweet?url=","http://www.facebook.com/sharer.php?u=","https://www.linkedin.com/shareArticle?mini=true&url=","http://reddit.com/submit?url=","http://www.pinterest.com/pin/create/button/?url=","https://plus.google.com/share?url= "];
+/*    var shareIntents1 = ["https://twitter.com/intent/tweet?url=","http://www.facebook.com/sharer.php?u=","https://www.linkedin.com/shareArticle?mini=true&url=","http://reddit.com/submit?url=","http://www.pinterest.com/pin/create/button/?url=","https://plus.google.com/share?url= "];
     var shareIntents2 = ["&amp;text=","&amp;t=","&summary=","&amp;title=","&amp;description=",""];
-    var shareIntents3 = ["","","+|+FT.com+|+Energy&amp;title=Model+the+climate+in+2100+with+our+global+emissions+calculator&amp;source=Financial+Times","","&amp;&media=http://ig.ft.com/sites/climate-change-calculator/tw.png",""];
+    var shareIntents3 = ["","","+|+FT.com+|+Energy&amp;title=Model+the+climate+in+2100+with+our+global+emissions+calculator&amp;source=Financial+Times","","&amp;&media=http://ig.ft.com/sites/climate-change-calculator/tw.png",""];*/
 
-    d3.selectAll('.shareDiv.interactive a').attr({
+/*    d3.selectAll('.shareDiv.interactive a').attr({
         'href':function(d,i){
             if(i < 5){
                 return (shareIntents1[i] + encodeURIComponent("http://ig.ft.com/sites/climate-change-calculator/#interactive") + shareIntents2[i] + ("Can you restrict global warming to the target of 2%C2%B0C by 2100? Find out with the Climate Change Calculator") + shareIntents3[i])
@@ -379,9 +379,9 @@ function flatpack(selection){
                 return (shareIntents1[i] + ("Can you restrict global warming to the target of 2%C2%B0C by 2100? Find out with the Climate Change Calculator"))
             }
         }
-    });
+    });*/
 
-    d3.selectAll('.shareDiv.story a').attr({
+/*    d3.selectAll('.shareDiv.story a').attr({
         'href':function(d,i){
             if(i < 5){
                 return (shareIntents1[i] + encodeURIComponent("http://ig.ft.com/sites/climate-change-calculator/#story") + shareIntents2[i] + ("Businesses face patchwork of rules under Paris climate deal") + shareIntents3[i])
@@ -389,7 +389,7 @@ function flatpack(selection){
                 return (shareIntents1[i] + ("Businesses face patchwork of rules under Paris climate deal"))
             }
         }
-    });
+    });*/
 
     queue()
       .defer(d3.csv, 'new.csv')
