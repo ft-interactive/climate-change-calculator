@@ -1,26 +1,43 @@
 function flatpack(selection){
 
-    var titletexts = ["Climate Change Calculator","","","","","","","","",""];
+    var titletexts = ["气候变化计算器","","","","","","","","",""];
 
     var dw = Math.floor(window.innerWidth);
 
-    var guidetexts = dw >= 600 ? ["Since February, countries have been publishing their plans for cutting greenhouse gas (GHG) emissions, ahead of a December UN meeting in Paris that aims to deliver a new accord on climate change...","If every country keeps pumping GHGs into the environment at its current rate until 2100, the planet&rsquo;s surface will warm by an average of up to 6&deg;C, bringing about a dramatically different climate...","Countries&rsquo; pledges for emissions cuts mostly cover the period between <span class='boldText'>2020 and 2030</span>. Let's see what would happen if all these commitments are met......","Most countries have now announced plans, but some of the biggest emitters are proposing to do the least, and globally, current pledges won&rsquo;t be enough to limit the temperature increase to the agreed limit of 2&deg;C by 2100. What about after 2030?","The Paris accord due to be struck in December is supposed to ensure countries ratchet up their pledges. Some have already set targets for <span class='boldText'>2030-2050</span>, and we can make estimates for the others...","These longer term plans are more ambitious, and if countries deliver on them, the pace of emissions growth could be slowed substantially. But there is still the question of what would happen between 2050 and 2100...","Even if every country met the pledges it has made to date, we would still be looking at a rise in emissions and temperatures. So what happens if the biggest emitters manage to cut their greenhouse gases <span class='boldText'>after 2050?</span>","If China, the US, EU and India all slashed their emissions sharply after 2050, it would make a big difference, but global temperature rise would still exceed 2&deg;C. What if those four eased off and left other countries to act?","As we can see, even a concerted effort by the next five largest emitters would make a much smaller impact. Without commitments from the very biggest, the battle could be lost","",""]
+       var guidetexts = dw >= 600 ? ["自从2月份以来，世界各国纷纷公布各自的温室气体(GHG)减排计划。12月份，联合国(UN)将在巴黎召开会议，旨在达成一份新的气候变化协议……",
+       "如果到2100年，每个国家都一直按目前速度向环境里排放温室气体，那么届时地球气温将平均升高至多6摄氏度，造就一种迥然不同的气候……",
+       "各国的减排承诺主要覆盖<span class='boldText'>2020年至2030年期间</span>。我们看看，如果所有这些承诺都兑现的话，会发生什么结果…… ",
+       "多数国家已公布了减排计划，但一些排放量最大的国家承诺的减排力度最小，在全球范围看，当前的承诺不足以使2100年前的气温升幅限制在2摄氏度的公认上限以内。2030年之后怎么办？",
+       "预定在12月达成的巴黎协议，应会确保各国提高承诺的减排量。有些国家已设定了<span class='boldText'>2030年至2050年</span>的目标，我们可以对其他国家做出估计……",
+       "这些长远计划更为雄心勃勃，如果各国兑现承诺，那么排放增速可能会大幅降低。但是仍有一个问题是2050年至2100年之会发生什么……",
+       "即便每个国家都兑现了自己迄今的承诺，我们仍将看到排放量和气温的升高。那么，如果最大的排放实体<span class='boldText'>在2050年之后</span>成功地减排温室气体，会发生什么情况？",
+       "如果2050年之后，中国、美国、欧盟和印度都大幅减排，那么这将会带来完全不同的局面，但全球气温升幅仍将超过2摄氏度。如果这4个实体放松了努力，而让其他国家行动起来，结果会怎样？",
+       "正如我们可能看到的那样，接下来五个排放量最大的实体所能起到的作用将小得多。没有最大排放实体的努力，这场战斗可能会失败","",""]
     :
-    ["Since February, countries have been publishing their plans for cutting greenhouse gas (GHG) emissions, ahead of a crucial December UN meeting in Paris...","If every country pumps out GHGs at its current rate until 2100, the planet will warm by up to 6&deg;C. The new accord to be signed in Paris must turn the tide...","Countries&rsquo; pledges for emissions cuts mostly refer to the years from <span class='boldText'>2020 to 2030</span>. Let&rsquo;s see what would happen if countries meet those commitments...","Some big emitters are making tame proposals, and globally, current pledges won&rsquo;t limit temperature rises to the agreed target of 2&deg;C. What about after 2030?","The new accord is meant to ensure countries ratchet up their pledges. Some have already set targets for <span class='boldText'>2030-2050</span> and we can make estimates for others...","These longer term plans go further, and could markedly slow emissions growth. But there is still the question of what happens between 2050 and 2100...","Even if every pledge to date is met, emissions will continue to rise. So what happens if the biggest emitters cut deeper still <span class='boldText'>after 2050?</span>","If China, the US, EU and India all slashed emissions sharply after 2050, it would make a big difference. What if those four eased off and left others to act?","Even a concerted effort by the next five largest emitters would make a much smaller impact. Without action from the very biggest, the battle could be lost","",""];
+    ["自从2月份以来，世界各国纷纷公布各自的温室气体(GHG)减排计划。12月份，联合国(UN)将在巴黎召开会议，旨在达成一份新的气候变化协议……",
+    "如果到2100年，每个国家都一直按目前速度向环境里排放温室气体，那么届时地球气温将平均升高至多6摄氏度，造就一种迥然不同的气候……",
+    "各国的减排承诺主要覆盖<span class='boldText'>2020年至2030年期间</span>。我们看看，如果所有这些承诺都兑现的话，会发生什么结果…… ",
+    "多数国家已公布了减排计划，但一些排放量最大的国家承诺的减排力度最小，在全球范围看，当前的承诺不足以使2100年前的气温升幅限制在2摄氏度的公认上限以内。2030年之后怎么办？",
+    "预定在12月达成的巴黎协议，应会确保各国提高承诺的减排量。有些国家已设定了<span class='boldText'>2030年至2050年</span>的目标，我们可以对其他国家做出估计……",
+    "这些长远计划更为雄心勃勃，如果各国兑现承诺，那么排放增速可能会大幅降低。但是仍有一个问题是2050年至2100年之会发生什么……",
+    "即便每个国家都兑现了自己迄今的承诺，我们仍将看到排放量和气温的升高。那么，如果最大的排放实体<span class='boldText'>在2050年之后</span>成功地减排温室气体，会发生什么情况？",
+    "如果2050年之后，中国、美国、欧盟和印度都大幅减排，那么这将会带来完全不同的局面，但全球气温升幅仍将超过2摄氏度。如果这4个实体放松了努力，而让其他国家行动起来，结果会怎样？",
+    "正如我们可能看到的那样，接下来五个排放量最大的实体所能起到的作用将小得多。没有最大排放实体的努力，这场战斗可能会失败","",""];
 
-    var usertexts = ["Now it&rsquo;s your turn. Resize the bars below to set countries&rsquo; ambitions for emissions cuts, starting with 2020-2030. Then proceed to the next step...","Now repeat the process for 2030-2050 to see the impact of medium-term ambitions. Then it&rsquo;s on to the final step through to 2100...","Finally, set targets for the last half of the century. Once you&rsquo;ve finished, you will be able to explore and share your unique results"];
-
+    var usertexts = ["现在该轮到你来挑战。透过伸缩下方长条图去设定每个国家在减排量上的企图，从2020年至2030年开始进行，再进入下一阶段",
+    "到2030至2050年间，重复以上步骤去看各国的中期表现。紧接著，你将来到最终阶段。",
+    "最后，请设定这个世纪的减排目标。当你完成后，将有机会去探索图表同时分享个人的独特结果。"];
     var animations = [
       function() {backBtn.classed('hidden',true);},
       function() {doClip(2100,2000);backBtn.classed('hidden',false);},
       function() {drawCurtains();d3.select('#to2030').classed('disabled introstate',false);yearLabelHolder.classed('introstate',false);},
       function() {preDraw(d3.range(0,10,1),INDCs1);},
-      function() {toNextSliders('1');d3.select('#to2030').classed('disabled',true);yearLabelHolder.transition().duration(500).style({'left':x(2040)+'px'});yearLabel.html('2030-2050');},
+      function() {toNextSliders('1');d3.select('#to2030').classed('disabled',true);yearLabelHolder.transition().duration(500).style({'left':x(2040)+'px'});yearLabel.html('2030年至2050年');},
       function() {preDraw(d3.range(0,10,1),INDCs2);},
-      function() {toNextSliders('2');d3.select('#to2050').classed('disabled',true);yearLabelHolder.transition().duration(500).style({'left':x(2075)+'px'});yearLabel.html('2050-2100');},
+      function() {toNextSliders('2');d3.select('#to2050').classed('disabled',true);yearLabelHolder.transition().duration(500).style({'left':x(2075)+'px'});yearLabel.html('2050年至2100年');},
       function() {preDraw(d3.range(0,10,1),[0,0,0,0,1,1,1,1,1,1]);},
       function() {preDraw(d3.range(0,10,1),[1,1,1,1,0,0,0,0,0,1]);},
-      function() {allowInteraction();d3.select('#to2100').classed('disabled',true);yearLabelHolder.transition().duration(500).style({'left':x(2025)+'px'});yearLabel.html('2020-2030');},
+      function() {allowInteraction();d3.select('#to2100').classed('disabled',true);yearLabelHolder.transition().duration(500).style({'left':x(2025)+'px'});yearLabel.html('2020年至2030年');},
       function() {resetAll();swipeIndex = 0;doClip(2012,500);backBtn.classed('hidden',true);d3.selectAll('.curtains').style('opacity',0);}
       ];
 
@@ -28,9 +45,9 @@ function flatpack(selection){
       function() {backBtn.classed('hidden',true);doClip(2012,2000);},
       function() {backBtn.classed('hidden',false);doClip(2100,2000);d3.selectAll('.curtains').style('opacity',0);},
       function() {drawCurtains();preDraw(d3.range(0,10,1),[1,1,1,1,1,1,1,1,1,1]);},
-      function() {backOne();yearLabelHolder.transition().duration(500).style({'left':x(2025)+'px'});yearLabel.html('2020-2030');loseEst();},
+      function() {backOne();yearLabelHolder.transition().duration(500).style({'left':x(2025)+'px'});yearLabel.html('2020年至2030年');loseEst();},
       function() {drawCurtains();preDraw(d3.range(0,10,1),[1,1,1,1,1,1,1,1,1,1]);},
-      function() {backTwo();yearLabelHolder.transition().duration(2000).style({'left':x(2040)+'px'});yearLabel.html('2030-2050');addEst();},
+      function() {backTwo();yearLabelHolder.transition().duration(2000).style({'left':x(2040)+'px'});yearLabel.html('2030年至2050年');addEst();},
       function() {preDraw(d3.range(0,10,1),[1,1,1,1,1,1,1,1,1,1]);},
       function() {preDraw(d3.range(0,10,1),[0,0,0,0,1,1,1,1,1,1]);},
       function() {preDraw(d3.range(0,10,1),[1,1,1,1,0,0,0,0,0,1]);},
@@ -237,9 +254,9 @@ function flatpack(selection){
 
 
     var buttonHolder = d3.select("#guidetext").append("span").attr("class","buttonHolder");
-    var backBtn = d3.select(".buttonHolder").append("span").attr("class","backbutton hidden").html("&laquo; Back");
+    var backBtn = d3.select(".buttonHolder").append("span").attr("class","backbutton hidden").html("&laquo; 往前");
     var counter1 = buttonHolder.append('span').attr({"class":"slideCounter one"}).html((swipeIndex+1) + "/" + (guidetexts.length+1));
-    var forBtn = d3.select(".buttonHolder").append("span").attr("class","animatebutton").html("Next &raquo;");
+    var forBtn = d3.select(".buttonHolder").append("span").attr("class","animatebutton").html("往后 &raquo;");
 
     forBtn.on("click",swipeForward);
     backBtn.on("click",swipeBack);
@@ -272,11 +289,11 @@ function flatpack(selection){
 
     var axisTitleLeft = titleHolder.append('p').attr({
         'class':'axisTitle left'
-    }).html("Annual GHG emissions<br>(tonnes bn CO<sub>2</sub>e)");
+    }).html("年度温室气体排放量<br>(CO<sub>2</sub>e) 10亿吨");
 
     var axisTitleRight = titleHolder.append('p').attr({
         'class':'axisTitle right'
-    }).html("Global mean temp.<br>change by 2100 (&deg;C)");
+    }).html("2100年以前<br>全球温度中位数变化 (&deg;C)");
 
     var veilrow = buttonLayer.append('div').attr({
         'id':'veilrow'
@@ -392,7 +409,7 @@ function flatpack(selection){
     });*/
 
     queue()
-      .defer(d3.csv, 'new.csv')
+      .defer(d3.csv, 'new-cn.csv')
       .await(initialise); 
 
   	var x = d3.scale.linear()
@@ -411,7 +428,7 @@ function flatpack(selection){
         'left':x(2025) + 'px',
         'top':y(140) + 'px'
     });
-    var yearLabel = yearLabelHolder.append('span').html('2020-2030');
+    var yearLabel = yearLabelHolder.append('span').html('2020至2030年');
 
     var clipRect = areaClip.append('rect').attr({
         'x':x(1990),
@@ -566,13 +583,13 @@ function flatpack(selection){
             "position":"absolute",
             "font-size":"0.9em"
         })
-        .html("Efforts to cut emissions");
+        .html("降低温室气体排放量的努力");
 
 	    var sliderTopLabel = svg.append('text').attr({
 		    	'class':'sliderLabel',
 		    	'x':width-margin.right,
 		    	'y':height*0.5+45
-		    }).text('No change: on course for 6\u00B0C rise');
+		    }).text('不做改变: 迈向气温增幅6\u00B0C 之路');
 
       var sta = svg.append("path").attr({
         class:'arrowPath',
@@ -585,7 +602,7 @@ function flatpack(selection){
 		    	'y':(height-margin.bottom)+(dw >= 600 ? 25:15)
 		    })
         // .text('Cuts required to restrict rise to 2\u00B0C');
-        .text('Cuts required to restrict rise to RCP 2.6');
+        .text('降低排放量以达到典型濃度路徑（RCP） 2.6');
 
       var sba = svg.append("path").attr({
         class:'arrowPath',
@@ -596,7 +613,7 @@ function flatpack(selection){
           'class':'sliderLabel left',
           'x':margin.left+23,
           'y':height*0.5+45
-        }).text('pledge');
+        }).text('各国承诺');
 
       var indcKeyLine = svg.append("line").attr({
         class:"indcKeyLine",
@@ -673,7 +690,7 @@ function flatpack(selection){
                 'xlink:href':function(d){return '#textPath' + d.key},
                 'startOffset':width > 600 ? x(2020):x(2010)
             })
-            .text(function(d){return "Pathway for " + d.key.replace(/D/g," \u00B0C warming").replace(/S/g,"")});
+            .text(function(d){return "气温增幅不超过" + d.key.replace(/D/g," \u00B0C").replace(/S/g,"")});
 
 
 	  	d3.select("#thesvg").append('g').attr({
@@ -759,7 +776,7 @@ function flatpack(selection){
 				.append('line')
 					.attr({
                         'class':function(d,i){
-                            return (sliderYear == 1 && sliderData[i].key in oc(["China","India","Brazil","Japan","Australia","RoW"])) ? 'refMarker est':'refMarker'},
+                            return (sliderYear == 1 && sliderData[i].key in oc(["中国","印度","巴西","日本","澳大利亚","其他国家"])) ? 'refMarker est':'refMarker'},
 						'x1':function(d,i){return sliderX(i) + (plotWidth/10)*0.05;},
                         'x2':function(d,i){return sliderX(i) + (plotWidth/10)*0.95;},
                         'y1':function(d,i){
@@ -813,7 +830,7 @@ function flatpack(selection){
 			myTransition();
 		}
 
-		buttonHolder.append('span').attr('id','resetButton').html('Reset').classed('introstate',true).on('click',function(){
+		buttonHolder.append('span').attr('id','resetButton').html('重新设定').classed('introstate',true).on('click',function(){
 
             tweetData = [[1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1,1,1]];
             generateResetData();
@@ -827,7 +844,7 @@ function flatpack(selection){
             d3.select("#toNext").style({"display":"block"});
 
             yearLabelHolder.transition().duration(500).style({'left':x(2025)+'px'});
-            yearLabel.html('2020-2030');
+            yearLabel.html('2020至2030年');
             yearLabelHolder.classed('introstate',false);
 
 			d3.select('#toNext').classed('disabled',false);
@@ -844,7 +861,7 @@ function flatpack(selection){
 
         counter2 = buttonHolder.append('span').attr({"class":"slideCounter two"}).html((swipeIndex+1) + "/" + (guidetexts.length+1)).classed({'disabled':false,'introstate':true});
 
-		buttonHolder.append('span').attr('id','toNext').html('Next &raquo;').classed({'disabled':false,'introstate':true}).on('click',function(){
+		buttonHolder.append('span').attr('id','toNext').html('下一步 &raquo;').classed({'disabled':false,'introstate':true}).on('click',function(){
 			toNextSliders();
 
             d3.select('#resetButton').classed('introstate',false);
@@ -864,7 +881,7 @@ function flatpack(selection){
             'class':'veil one'
         }).style({
         })
-        .html('Create your own model')
+        .html('建立你的预测模型')
         .on('click',function(){
             allowInteraction();
         });
@@ -876,7 +893,7 @@ function flatpack(selection){
         }).style({
             'display':'none'
         })
-        .html('Back to narrative')
+        .html('回图表叙述')
         .on('click',function(){
             startStory();
             setTimeout(function(){d3.select('#startStory').attr('id','animatebutton').on("click",swipeForward);},10);
@@ -1062,7 +1079,7 @@ function flatpack(selection){
 	    		d3.selectAll('.refMarker')
 	    		.attr({
                     'class':function(d,i){
-                        return (sliderYear == 1 && sliderData[i].key in oc(["China","India","Brazil","Japan","Australia","RoW"])) ? 'refMarker est':'refMarker'},
+                        return (sliderYear == 1 && sliderData[i].key in oc(["中国","印度","巴西","日本","澳大利亚","其他国家"])) ? 'refMarker est':'refMarker'},
 	                'y1':function(d,i){
 	                    return (sliderY(sliderData[i].values[2]['y' + sliderYears[sliderYear]]));},
 	                'y2':function(d,i){ return (sliderY(sliderData[i].values[2]['y' + sliderYears[sliderYear]]));},
@@ -1509,7 +1526,7 @@ function flatpack(selection){
         }
 
         function addEst(){
-                var indcKeyT = d3.select(".sliderLabel.left").text('pledge | estimate');
+                var indcKeyT = d3.select(".sliderLabel.left").text('各国承诺 | 预测');
 
                 var indcKeyLineEst = svg.append("line").attr({
                     class:"indcKeyLine est",
@@ -1521,7 +1538,7 @@ function flatpack(selection){
         }
 
         function loseEst(){
-            d3.select(".sliderLabel.left").text('pledge');
+            d3.select(".sliderLabel.left").text('各国承诺');
             d3.select(".indcKeyLine.est").remove();
         }
 
@@ -1536,7 +1553,7 @@ function flatpack(selection){
 
             if(sliderYear == 1){
 
-                var indcKeyT = d3.select(".sliderLabel.left").text('pledge | estimate');
+                var indcKeyT = d3.select(".sliderLabel.left").text('各国承诺 | 预测');
 
                 var indcKeyLineEst = svg.append("line").attr({
                     class:"indcKeyLine est",
@@ -1547,7 +1564,7 @@ function flatpack(selection){
                 });
 
             }else{
-                d3.select(".sliderLabel.left").text('pledge');
+                d3.select(".sliderLabel.left").text('承诺');
                 d3.select(".indcKeyLine.est").remove();
             }
 
