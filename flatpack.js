@@ -409,7 +409,7 @@ function flatpack(selection){
     });*/
 
     queue()
-      .defer(d3.csv, 'new-cn.csv')
+      .defer(d3.csv, 'new.csv')
       .await(initialise); 
 
   	var x = d3.scale.linear()
