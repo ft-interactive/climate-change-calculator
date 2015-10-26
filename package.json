@@ -1,0 +1,19 @@
+{
+  "name": "climate-change-calculator",
+  "version": "1.0.0",
+  "description": "FT Interactive",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ft-interactive/climate-change-calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ft-interactive/climate-change-calculator/issues"
+  },
+  "homepage": "https://github.com/ft-interactive/climate-change-calculator#readme"
+}

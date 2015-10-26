@@ -1,5 +1,5 @@
 html,body{height:100%;margin:0;width:100%;}
-body{font-size:16px;background-color:#fff1e0;font-family:"FinancierTextWeb",serif;}
+body{font-size:18px;background-color:#fff1e0;/*font-family:"FinancierTextWeb",serif;*/}
 /*h1{text-align:center;position:absolute;margin:auto;left:0;right:0;font-size:5em;max-width:660px;color:white;top:50%;transform:translateY(-50%);font-family:"FinancierDisplayWeb",serif;}*/
 
 h1{
@@ -14,7 +14,7 @@ h1{
     color: white;
     top: 50%;
     transform: translateY(-50%);
-    font-family: "FinancierDisplayWeb",serif;
+    /*font-family: "FinancierDisplayWeb",serif;*/
     text-shadow: 0px 0px 10px #2b4b6e;
     font-weight:normal;
 }
@@ -36,10 +36,10 @@ h2{color:#333;font-size:1.9em;font-weight:normal;}
 
 #kic-credits{border-top:0px solid #e9decf;border-bottom:1px solid #e9decf;font-family:"MetricWeb",sans-serif;}
 #story,#kic-credits,div.shareDiv.interactive{position:relative;margin:auto;left:0;right:0;max-width:800px;text-align:center;}
-#story p{font-size:21px;line-height:1.375em;color:#333;}
+#story p{font-size:21px;line-height:1.618em;color:#333;}
 #story p:nth-child(1){margin-top:3em;}
 #video-holder{position:relative;-webkit-margin-before:1em;-webkit-margin-after:2em;max-width:800px;margin:auto;padding:30px;}
-#story p,#kic-credits p{max-width:600px;margin:auto;line-height:1.375em;-webkit-margin-before:1em;-webkit-margin-after:1em;text-align:left;padding:5px;}
+#story p,#kic-credits p{max-width:600px;margin:auto;line-height:1.618em;-webkit-margin-before:1em;-webkit-margin-after:1em;text-align:left;padding:5px;}
 p a,#kic-credits a{background-color:#fff1e0;color: #2e6e9e;transition: 0.3s;pointer-events: all;cursor: pointer;text-decoration: none;}
 p a:hover,#kic-credits a:hover{color: #000;}
 
@@ -195,7 +195,9 @@ overflow:hidden;
 }
 
 .anchorLink div div i{
-	font-size:4em;
+	font-size:3em;
+	width: 100%;
+	background: url('arrow-up.svg') center center no-repeat;
 }
 
 .anchorLink div div:nth-of-type(1){
