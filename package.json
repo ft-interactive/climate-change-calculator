@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/ft-interactive/climate-change-calculator/issues"
   },
-  "homepage": "https://github.com/ft-interactive/climate-change-calculator#readme"
+  "homepage": "https://github.com/ft-interactive/climate-change-calculator#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-prefix": "0.0.14",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2"
+  }
 }

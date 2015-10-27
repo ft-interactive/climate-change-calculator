@@ -2,14 +2,27 @@ var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var mincss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
+var prefix = require('gulp-prefix');
+var rename = require('gulp-rename');
+
+
+gulp.task('dist:test', function() {
+	return gulp.src(['./*.{png,js,css,svg,csv,html}', '!gulpfile.js']).
+		pipe(gulp.dest('../interact/climate-change-calculator'));
+});
 
 gulp.task('html', function() {
+	var prefixUrl = 'http://interactive.ftchinese.com/climate-change-calculator';
+
 	return gulp.src('index.html')
-		.pipe(htmlmin())
-		.pipe(gulp.dest('dist'));
+		.pipe(prefix(prefixUrl))
+		.pipe(rename('climate2015.html'))
+		.pipe(gulp.dest('../deploy/dev_www/frontend/tpl/special/'));
 });
 
 gulp.task('copy', function() {
-	return gulp.src(['./*', '!./*.html'])
-		.pipe(gulp.dest('assets'));
+	return gulp.src(['./*.{png,js,css,svg,csv}', '!gulpfile.js'])
+		.pipe(gulp.dest('../ft-interact/climate-change-calculator/'));
 });
+
+gulp.task('dist',['html', 'copy']);

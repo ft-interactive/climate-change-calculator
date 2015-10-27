@@ -443,7 +443,7 @@ path.triangle.hidden{-webkit-animation:none;-webkit-animation-iteration-count:no
 #promos img{width:100%;}
 #promos > p{margin-left:10px;}
 .o-grid-row p {min-height:3em;color:#2e6e9e;-webkit-margin-before:0;-webkit-margin-after:0;}
-div.o-grid-row > div{margin-bottom:5px;/*border-bottom:1px solid #e9decf;*/}
+div.o-grid-row > div{margin-bottom:5px;font-family:serif;font-size:16px;/*border-bottom:1px solid #e9decf;*/}
 .demo-cell{border-radius:5px;padding:5px 10px;cursor:pointer;transition:0.3s;background-color:#fff;}
 .demo-cell:hover{background-color:#FFFAF5;}
 /*div.o-grid-row > div:hover{background-color:#F4E8D8;}*/

@@ -599,7 +599,7 @@ function flatpack(selection){
 	    var sliderBottomLabel = svg.append('text').attr({
 		    	'class':'sliderLabel',
 		    	'x':width-margin.right,
-		    	'y':(height-margin.bottom)+(dw >= 600 ? 25:15)
+		    	'y':(height-margin.bottom)+(dw >= 600 ? 23:13)
 		    })
         // .text('Cuts required to restrict rise to 2\u00B0C');
         .text('使升温幅度不超过典型浓度路径(RCP) 2.6情景之限度所需的减排量');
