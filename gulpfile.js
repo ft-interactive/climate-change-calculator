@@ -7,6 +7,7 @@ var rename = require('gulp-rename');
 var gulpif = require('gulp-if');
 var replace = require('gulp-replace');
 var git = require('gulp-git');
+var runSequence = require('run-sequence');
 
 
 gulp.task('dist:test', function() {
@@ -22,11 +23,7 @@ gulp.task('status', function() {
 
 gulp.task('add', function() {
 	return gulp.src('.')
-		.pipe(git.add());
-});
-
-gulp.task('commit', function() {
-	return gulp.src('.')
+		.pipe(git.add())
 		.pipe(git.commit('dist commit'));
 });
 
@@ -39,6 +36,7 @@ gulp.task('push', function() {
 		console.log('Changes pushed to GitHub repository `chinese` branch!');
 	});
 });
+
 
 gulp.task('html', function() {
 	var prefixUrl = 'http://interactive.ftchinese.com/climate-change-calculator';
