@@ -1,5 +1,5 @@
 html,body{height:100%;margin:0;width:100%;}
-body{font-size:18px;background-color:#fff1e0;/*font-family:"FinancierTextWeb",serif;*/}
+body{font-size:18px;background-color:#fff1e0;font-family: "Heiti SC", "Hiragino Sans GB", "微软雅黑", "Microsoft JhengHei", Arial, sans-serif;/*font-family:"FinancierTextWeb",serif;*/}
 /*h1{text-align:center;position:absolute;margin:auto;left:0;right:0;font-size:5em;max-width:660px;color:white;top:50%;transform:translateY(-50%);font-family:"FinancierDisplayWeb",serif;}*/
 
 h1{
@@ -443,7 +443,7 @@ path.triangle.hidden{-webkit-animation:none;-webkit-animation-iteration-count:no
 #promos img{width:100%;}
 #promos > p{margin-left:10px;}
 .o-grid-row p {min-height:3em;color:#2e6e9e;-webkit-margin-before:0;-webkit-margin-after:0;}
-div.o-grid-row > div{margin-bottom:5px;font-family:serif;font-size:16px;/*border-bottom:1px solid #e9decf;*/}
+div.o-grid-row > div{margin-bottom:5px;font-family:Georgia, "Times New Roman", Times, serif;font-size:14px;/*border-bottom:1px solid #e9decf;*/}
 .demo-cell{border-radius:5px;padding:5px 10px;cursor:pointer;transition:0.3s;background-color:#fff;}
 .demo-cell:hover{background-color:#FFFAF5;}
 /*div.o-grid-row > div:hover{background-color:#F4E8D8;}*/
