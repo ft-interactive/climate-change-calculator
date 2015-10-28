@@ -32,7 +32,7 @@ gulp.task('images', function() {
 		.pipe(gulp.dest('./'));
 });
 
-gulp.task('copy', ['images'] function() {
+gulp.task('copy', ['images'], function() {
 	return gulp.src(['./*.{png,js,css,svg,jpg}', '!gulpfile.js'])
 		.pipe(
 			gulpif('flatpack.js', 
