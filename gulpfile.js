@@ -21,12 +21,12 @@ gulp.task('status', function() {
 });
 
 gulp.task('add', function() {
-	return gulp.src('./*')
+	return gulp.src('.')
 		.pipe(git.add());
 });
 
 gulp.task('commit', function() {
-	return gulp.src('./*')
+	return gulp.src('.')
 		.pipe(git.commit('dist commit'));
 });
 
