@@ -6,6 +6,7 @@ var prefix = require('gulp-prefix');
 var rename = require('gulp-rename');
 var gulpif = require('gulp-if');
 var replace = require('gulp-replace');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('dist:test', function() {
 	return gulp.src(['./*.{png,js,css,svg,csv,html}', '!gulpfile.js']).
@@ -25,8 +26,14 @@ gulp.task('html', function() {
 		.pipe(gulp.dest('../deploy/dev_www/frontend/tpl/special/'));
 });
 
-gulp.task('copy', function() {
-	return gulp.src(['./*.{png,js,css,svg,csv}', '!gulpfile.js'])
+gulp.task('images', function() {
+	return gulp.src('./*.{png,jpg}')
+		.pipe(imagemin())
+		.pipe(gulp.dest('./'));
+});
+
+gulp.task('copy', ['images'] function() {
+	return gulp.src(['./*.{png,js,css,svg,jpg}', '!gulpfile.js'])
 		.pipe(
 			gulpif('flatpack.js', 
 				replace('new.csv', 'http://www.ftchinese.com/m/marketing/climate.csv.html'
