@@ -966,15 +966,15 @@ function flatpack(selection){
     	var tweetText;
 
     	if(tMax >= 5.95){
-    		tweetText = "In my climate model global inaction on CO2 emissions means warming reaches 6%C2%B0C by 2100. Can you hit the 2%C2%B0C target?";
+    		tweetText = "在我的预测模型中，全球将对CO2排放不为所动，这代表全球气温在2100年前将上升6%C2%B0C。你有办法让全球升温幅度控制在2%C2%B0C的目标吗？";
     	}else if(tMax < 5.95 && tMax >=4.5){
-            tweetText = "In my climate model limited action on CO2 emissions means warming reaches " + d3.format(".1f")(tMax).replace(/.0/g,"") + "%C2%B0C by 2100. Can you hit the 2%C2%B0C target?";
+            tweetText = "在我的预测模型中，全球只付出有限行动控制CO2排放，这代表全球气温在2100年前将上升" + d3.format(".1f")(tMax).replace(/.0/g,"") + "%C2%B0C。你有办法让全球升温幅度控制在2%C2%B0C的目标吗？";
     	}else if(tMax < 4.5 && tMax >=2.95){
-            tweetText = "In my climate model global CO2 emissions fall but warming approaches " + d3.format(".1f")(tMax).replace(/.0/g,"") + "%C2%B0C by 2100. Can you hit the 2%C2%B0C target?";
+            tweetText = "在我的预测模型中，全球将减少CO2排放，但全球气温仍将增加" + d3.format(".1f")(tMax).replace(/.0/g,"") + "%C2%B0C。你有办法让全球升温幅度控制在2%C2%B0C的目标吗？";
         }else if(tMax < 2.95 && tMax > 2.85){
-            tweetText = "In my model global CO2 emissions fall and there's a 50%25 chance warming is below 2%C2%B0C. Can you hit the 2%C2%B0C target too?";
+            tweetText = "在我的预测模型中，全球将减少CO2排放，有50%25机率全球气温增幅将控制在2%C2%B0C以下。你有办法像我一样让全球升温幅度控制在2%C2%B0C吗？";
         }else{
-            tweetText = "In my model global CO2 emissions fall and there's a 66%25 chance warming is below 2%C2%B0C. Can you hit the 2%C2%B0C target too?"
+            tweetText = "在我的预测模型中，全球将减少CO2排放，有66%25机率全球气温增幅将控制在2%C2%B0C以下。你有办法像我一样让全球升温幅度控制在2%C2%B0C吗？"
         }
 
     	tweetTextHTML = (("https://twitter.com/intent/tweet?text=" + tweetText + ". Try yours here&url=").replace(/ /g,"+").replace(/\s+(degrees)+\s/g,"&deg;") + ("http://ft.com/ig/sites/climate-calculator/").replace(/:/g,"%3A").replace(/\//g,"%2F"));
